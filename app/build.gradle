@@ -2,6 +2,9 @@ buildscript {
     System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true' // Fix gradle bug
 
     repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
         jcenter()
         mavenCentral()
         flatDir dirs: "libs"
@@ -30,6 +33,9 @@ buildscript {
 }
 
 repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
     mavenCentral()
     maven { url "http://jcenter.bintray.com" }
     maven { url "https://jitpack.io" }
